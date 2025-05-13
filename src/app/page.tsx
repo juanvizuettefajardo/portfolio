@@ -1,6 +1,23 @@
+import Hero from "@/app/components/hero";
+import About from "@/app/components/about";
+import Proyects from "@/app/components/proyects";
+import Testimonials from "@/app/components/testimonials";
+import Experience from "@/app//components/experience";
+import Contact from "@/app/components/contact";
+import DogFacts from "@/app/components/dog-facts";
+
 export default function Home() {
   return (
-    <>
+    <main className="min-h-screen">
+      <Hero />
+      <About />
+      <Proyects />
+      <Testimonials />
+      <Experience />
+      <DogFacts />
+      <Contact />
+    </main>
+    /* <>
       <div className="flex items-center justify-center w-screen h-screen bg-blue-200">
         <div className="flex flex-col items-center gap-3 bg-purple-100 w-[600px] h-[230px] p-4 rounded-lg">
           <h1 className="text-[hsl(var(--primary))] font-extrabold text-3xl">
@@ -24,5 +41,6 @@ export default function Home() {
         </div>
       </div>
     </>
+    */
   );
 }
