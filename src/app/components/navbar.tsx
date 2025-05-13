@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { cn } from "../lib/utils";
+import { Menu, X, Bone } from "lucide-react";
 
 const navLinks = [
   { name: "Inicio", href: "#hero" },
@@ -15,6 +17,7 @@ const navLinks = [
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,13 +28,18 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className="fixed top-0 w-full z-50 transition-all duration-300">
+    <header
+      className={cn(
+        "fixed top-0 w-full z-50 transition-all duration-300 ",
+        scrolled
+          ? "bg-amber-600 backdrop-blur-sm shadow-md"
+          : "bg-amber-600/80 backdrop-blur-sm"
+      )}
+    >
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <Link
-            href="#"
-            className="flex items-center space-x-2  backdrop-blur-sm shadow-md bg-amber-600/80"
-          >
+          <Link href="#" className="flex items-center space-x-2">
+            <Bone className="h-8 w-8 text-white" />
             <span className="text-xl font-bold text-white">JMVFolio</span>
           </Link>
 
@@ -53,7 +61,7 @@ export default function Navbar() {
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
-            {isOpen ? "open" : "close"}
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
