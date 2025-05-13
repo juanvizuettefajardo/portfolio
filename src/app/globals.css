@@ -61,7 +61,6 @@
   }
 }
 
-/* Animaciones personalizadas */
 @keyframes float {
   0% {
     transform: translateY(0px);
@@ -111,7 +110,6 @@
   transform: rotateY(180deg);
 }
 
-/* Estilos para scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
 }
