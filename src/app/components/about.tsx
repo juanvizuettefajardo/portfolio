@@ -1,5 +1,6 @@
 import React from "react";
 import { PawPrintIcon as Paw, Code, Palette, Lightbulb } from "lucide-react";
+import Image from "next/image";
 
 const skills = [
   { name: "Java", level: 90 },
@@ -33,31 +34,39 @@ export default function about() {
             <div className="relative bg-white p-6 rounded-lg shadow-md transition-transform group-hover:translate-y-1 duration-300">
               <div className="grid grid-cols-2 gap-4">
                 <div className="aspect-square rounded-lg overflow-hidden bg-amber-50">
-                  <img
+                  <Image
                     src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-05-09%20at%208.05.08%20AM%20%282%29-MzRwlUVsn2apwY5TM50SOcSERyrRXU.jpeg"
                     alt="Mi foto"
-                    className="w-full h-full object-cover transition-transform group-hover:scale-105 duration-300"
+                    width={180}
+                    height={180}
+                    className="object-cover transition-transform group-hover:scale-105 duration-300"
                   />
                 </div>
                 <div className="aspect-square rounded-lg overflow-hidden bg-amber-50">
-                  <img
+                  <Image
                     src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-05-09%20at%208.05.09%20AM-xrjDfFQPdNZ0Fb6Vord92X9mzbrT9y.jpeg"
                     alt="Con mi perrita"
                     className="w-full h-full object-cover transition-transform group-hover:scale-105 duration-300"
+                    width={180}
+                    height={180}
                   />
                 </div>
                 <div className="aspect-square rounded-lg overflow-hidden bg-amber-50">
-                  <img
+                  <Image
                     src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-05-09%20at%208.05.08%20AM%20%281%29-5coUb89BCzddxrKZkaFHzuiuu4nS8P.jpeg"
                     alt="Mi perrita durmiendo"
                     className="w-full h-full object-cover transition-transform group-hover:scale-105 duration-300"
+                    width={180}
+                    height={180}
                   />
                 </div>
                 <div className="aspect-square rounded-lg overflow-hidden relative bg-amber-50">
-                  <img
+                  <Image
                     src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-05-09%20at%208.16.03%20AM-ndjtEAMew6TVmuxkgWPoHZDQUln3Em.jpeg"
                     alt="En memoria de mi perrita"
                     className="w-full h-full object-cover transition-transform group-hover:scale-105 duration-300"
+                    width={180}
+                    height={180}
                   />
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/4 opacity-40">
