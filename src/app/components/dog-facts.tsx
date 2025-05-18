@@ -185,7 +185,6 @@ export default function DogFacts() {
                   }`}
                   onClick={() => setIsFlipped(!isFlipped)}
                 >
-                  {/* Frente de la tarjeta */}
                   <div className="absolute w-full h-full backface-hidden">
                     <div className="relative overflow-hidden rounded-lg aspect-video h-full bg-amber-50">
                       <img
@@ -201,7 +200,6 @@ export default function DogFacts() {
                     </div>
                   </div>
 
-                  {/* Reverso de la tarjeta */}
                   <div className="absolute w-full h-full backface-hidden rotate-y-180 bg-amber-100 rounded-lg p-6 flex flex-col justify-center items-center">
                     <h4 className="text-amber-800 text-xl font-bold mb-4">
                       {dogBreeds[activeBreed].name}
@@ -231,17 +229,17 @@ export default function DogFacts() {
               </Button>
 
               <div className="flex justify-center mt-4 space-x-1">
-                {dogBreeds.map((_, index) => (
+                {dogBreeds.map((_, key) => (
                   <button
-                    key={index}
+                    key={key}
                     onClick={() => {
-                      setActiveBreed(index);
+                      setActiveBreed(key);
                       setIsFlipped(false);
                     }}
                     className={`w-2 h-2 rounded-full ${
-                      activeBreed === index ? "bg-amber-600" : "bg-amber-200"
+                      activeBreed === key ? "bg-amber-600" : "bg-amber-200"
                     }`}
-                    aria-label={`Ver raza ${index + 1}`}
+                    aria-label={`Ver raza ${key + 1}`}
                   />
                 ))}
               </div>
