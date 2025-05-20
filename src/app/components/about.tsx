@@ -35,7 +35,7 @@ export default function about() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="aspect-square rounded-lg overflow-hidden bg-amber-50">
                   <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-05-09%20at%208.05.08%20AM%20%282%29-MzRwlUVsn2apwY5TM50SOcSERyrRXU.jpeg"
+                    src="mifoto.jpeg"
                     alt="Mi foto"
                     width={180}
                     height={180}
@@ -44,7 +44,7 @@ export default function about() {
                 </div>
                 <div className="aspect-square rounded-lg overflow-hidden bg-amber-50">
                   <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-05-09%20at%208.05.09%20AM-xrjDfFQPdNZ0Fb6Vord92X9mzbrT9y.jpeg"
+                    src="./conmiperrita.png"
                     alt="Con mi perrita"
                     className="w-full h-full object-cover transition-transform group-hover:scale-105 duration-300"
                     width={180}
@@ -53,7 +53,7 @@ export default function about() {
                 </div>
                 <div className="aspect-square rounded-lg overflow-hidden bg-amber-50">
                   <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-05-09%20at%208.05.08%20AM%20%281%29-5coUb89BCzddxrKZkaFHzuiuu4nS8P.jpeg"
+                    src=""
                     alt="Mi perrita durmiendo"
                     className="w-full h-full object-cover transition-transform group-hover:scale-105 duration-300"
                     width={180}
@@ -62,7 +62,7 @@ export default function about() {
                 </div>
                 <div className="aspect-square rounded-lg overflow-hidden relative bg-amber-50">
                   <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-05-09%20at%208.16.03%20AM-ndjtEAMew6TVmuxkgWPoHZDQUln3Em.jpeg"
+                    src="./enmemoria.png"
                     alt="En memoria de mi perrita"
                     className="w-full h-full object-cover transition-transform group-hover:scale-105 duration-300"
                     width={180}
