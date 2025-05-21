@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { ExternalLink, Github } from "lucide-react";
+import Image from "next/image";
 
 const projects = [
   {
@@ -66,7 +67,6 @@ export default function Projects() {
       id="projects"
       className="py-20 bg-amber-50 relative overflow-hidden"
     >
-      {/* Fondo animado de huellas de perro */}
       <div className="absolute inset-0 opacity-5">
         {Array.from({ length: 15 }).map((_, i) => (
           <div
@@ -100,7 +100,9 @@ export default function Projects() {
               className="bg-white rounded-lg overflow-hidden shadow-md transition-all hover:shadow-lg hover:-translate-y-2 duration-300 relative group"
             >
               <div className="relative h-48 overflow-hidden">
-                <img
+                <Image
+                  width={350}
+                  height={350}
                   src={project.image || "/placeholder.svg"}
                   alt={project.title}
                   className="object-cover w-full h-full transition-transform group-hover:scale-105 duration-500"

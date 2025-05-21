@@ -10,6 +10,7 @@ import {
   ChevronRight,
   Bone,
 } from "lucide-react";
+import Image from "next/image";
 
 const dogFacts = [
   "Los perros pueden entender hasta 250 palabras y gestos.",
@@ -181,13 +182,14 @@ export default function DogFacts() {
                   }`}
                   onClick={() => setIsFlipped(!isFlipped)}
                 >
-                  {/* Frente de la tarjeta */}
                   <div className="absolute w-full h-full backface-hidden">
                     <div className="relative overflow-hidden rounded-lg aspect-video h-full bg-amber-50">
-                      <img
+                      <Image
+                        width={350}
+                        height={400}
                         src={dogBreeds[activeBreed].image || "/placeholder.svg"}
                         alt={dogBreeds[activeBreed].name}
-                        className="object-cover w-full h-full transition-transform duration-500 hover:scale-105"
+                        className="object-cover transition-transform duration-500 hover:scale-105"
                       />
                       <div className="absolute bottom-0 left-0 right-0 bg-amber-600 py-2 px-4">
                         <h4 className="text-white text-xl font-bold">

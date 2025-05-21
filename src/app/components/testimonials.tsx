@@ -42,7 +42,6 @@ export default function Testimonials() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Añadir nuevo testimonio
     const newTestimonial = {
       id: Date.now(),
       ...formData,
@@ -50,7 +49,6 @@ export default function Testimonials() {
 
     setTestimonials((prev) => [...prev, newTestimonial]);
 
-    // Resetear formulario
     setFormData({
       name: "",
       position: "",
@@ -192,7 +190,6 @@ export default function Testimonials() {
           </div>
         )}
 
-        {/* Lista de testimonios */}
         <div className="grid md:grid-cols-2 gap-8">
           {testimonials.map((testimonial) => (
             <div
@@ -202,7 +199,7 @@ export default function Testimonials() {
               <Quote className="absolute top-4 right-4 h-8 w-8 text-amber-200" />
 
               <p className="text-amber-700 mb-6 relative z-10">
-                "{testimonial.content}"
+                {testimonial.content}
               </p>
 
               <div className="flex mb-2">
