@@ -30,8 +30,7 @@ const dogFacts = [
 const dogBreeds = [
   {
     name: "Pug",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-05-09%20at%208.16.03%20AM-ndjtEAMew6TVmuxkgWPoHZDQUln3Em.jpeg",
+    image: "/images/conmiperrita.png",
     fact: "Los pugs son perros de compañía excelentes, conocidos por su lealtad y personalidad juguetona.",
   },
   {
@@ -185,6 +184,7 @@ export default function DogFacts() {
                   }`}
                   onClick={() => setIsFlipped(!isFlipped)}
                 >
+                  {/* Frente de la tarjeta */}
                   <div className="absolute w-full h-full backface-hidden">
                     <div className="relative overflow-hidden rounded-lg aspect-video h-full bg-amber-50">
                       <img
@@ -200,6 +200,7 @@ export default function DogFacts() {
                     </div>
                   </div>
 
+                  {/* Reverso de la tarjeta */}
                   <div className="absolute w-full h-full backface-hidden rotate-y-180 bg-amber-100 rounded-lg p-6 flex flex-col justify-center items-center">
                     <h4 className="text-amber-800 text-xl font-bold mb-4">
                       {dogBreeds[activeBreed].name}
@@ -229,17 +230,17 @@ export default function DogFacts() {
               </Button>
 
               <div className="flex justify-center mt-4 space-x-1">
-                {dogBreeds.map((_, key) => (
+                {dogBreeds.map((_, index) => (
                   <button
-                    key={key}
+                    key={index}
                     onClick={() => {
-                      setActiveBreed(key);
+                      setActiveBreed(index);
                       setIsFlipped(false);
                     }}
                     className={`w-2 h-2 rounded-full ${
-                      activeBreed === key ? "bg-amber-600" : "bg-amber-200"
+                      activeBreed === index ? "bg-amber-600" : "bg-amber-200"
                     }`}
-                    aria-label={`Ver raza ${key + 1}`}
+                    aria-label={`Ver raza ${index + 1}`}
                   />
                 ))}
               </div>

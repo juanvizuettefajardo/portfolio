@@ -8,7 +8,15 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 
-const initialTestimonials = [];
+interface Testimonial {
+  id: number;
+  name: string;
+  position: string;
+  content: string;
+  rating: number;
+}
+
+const initialTestimonials: Testimonial[] = [];
 
 export default function Testimonials() {
   const [testimonials, setTestimonials] = useState(initialTestimonials);

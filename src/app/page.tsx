@@ -1,8 +1,8 @@
 import Hero from "@/app/components/hero";
 import About from "@/app/components/about";
-import Proyects from "@/app/components/proyects";
+import Proyects from "./components/proyects";
 import Testimonials from "@/app/components/testimonials";
-import Experience from "@/app//components/experience";
+import Experience from "@/app/components/experience";
 import Contact from "@/app/components/contact";
 import DogFacts from "@/app/components/dog-facts";
 

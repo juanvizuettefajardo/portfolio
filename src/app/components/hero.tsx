@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { Button } from "./ui/button";
 import { ArrowRight, Bone, PawPrint } from "lucide-react";
@@ -9,7 +11,6 @@ export default function Hero() {
       id="hero"
       className="relative pt-20 min-h-screen flex items-center overflow-hidden"
     >
-      {/* Fondo animado de huellas de perro */}
       <div className="absolute inset-0 -z-10 opacity-5">
         {Array.from({ length: 20 }).map((_, i) => (
           <PawPrint

@@ -35,7 +35,7 @@ export default function about() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="aspect-square rounded-lg overflow-hidden bg-amber-50">
                   <Image
-                    src="mifoto.jpeg"
+                    src="/images/profile-with-dog.png"
                     alt="Mi foto"
                     width={180}
                     height={180}
@@ -44,16 +44,16 @@ export default function about() {
                 </div>
                 <div className="aspect-square rounded-lg overflow-hidden bg-amber-50">
                   <Image
-                    src="./conmiperrita.png"
+                    src="/images/mifoto.png"
                     alt="Con mi perrita"
-                    className="w-full h-full object-cover transition-transform group-hover:scale-105 duration-300"
                     width={180}
                     height={180}
+                    className="object-cover transition-transform group-hover:scale-105 duration-300"
                   />
                 </div>
                 <div className="aspect-square rounded-lg overflow-hidden bg-amber-50">
                   <Image
-                    src=""
+                    src="/images/miperritadurmiendo.png"
                     alt="Mi perrita durmiendo"
                     className="w-full h-full object-cover transition-transform group-hover:scale-105 duration-300"
                     width={180}
@@ -62,11 +62,11 @@ export default function about() {
                 </div>
                 <div className="aspect-square rounded-lg overflow-hidden relative bg-amber-50">
                   <Image
-                    src="./enmemoria.png"
-                    alt="En memoria de mi perrita"
-                    className="w-full h-full object-cover transition-transform group-hover:scale-105 duration-300"
+                    src="/images/conmiperrita.png"
+                    alt="Con mi perrita"
                     width={180}
                     height={180}
+                    className="object-cover transition-transform group-hover:scale-105 duration-300"
                   />
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/4 opacity-40">

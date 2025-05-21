@@ -1,3 +1,4 @@
+"use client";
 import { Briefcase, GraduationCap } from "lucide-react";
 
 const workExperience = [
