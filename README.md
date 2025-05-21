@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio Web Personal - Proyecto de Aprendizaje Universitario
 
-## Getting Started
+¡Hola! Mi nombre es *Juan Vizuette* y actualmente soy estudiante de *Ingeniería de Software. Este proyecto es una parte importante de mi proceso de formación, y lo he desarrollado aplicando los **métodos, herramientas y buenas prácticas que nos ha enseñado el profesor en clase*.
 
-First, run the development server:
+Mi objetivo con este portafolio es practicar lo aprendido, explorar nuevas tecnologías del desarrollo web moderno y demostrar lo que puedo construir como aprendiz. Aunque aún me falta mucho por mejorar, este proyecto representa el esfuerzo y la dedicación que estoy poniendo en mi formación como desarrollador.
+
+## ¿Por qué este proyecto?
+
+Decidí hacer un portafolio porque me permite aplicar lo visto en clase de forma práctica. También es una manera de ir construyendo una presencia profesional mientras aprendo a usar herramientas reales del mundo del software.
+
+Todo lo que ves aquí fue realizado *siguiendo los pasos y recomendaciones del profesor*, como el uso de buenas prácticas en la estructura del proyecto, el uso de tecnologías actuales y la documentación básica para facilitar la comprensión y el despliegue.
+
+## Tecnologías que usé
+
+Estas son las herramientas que utilicé en el desarrollo del portafolio, varias de las cuales nos han sido enseñadas directamente en clase:
+
+- *Next.js*: Framework de React que permite crear aplicaciones rápidas y optimizadas, recomendado por el profesor para este tipo de proyectos.
+- *TypeScript*: Nos enseñaron su importancia para evitar errores y tener un código más organizado y entendible.
+- *Tailwind CSS*: Un sistema de estilos que aprendimos a usar para lograr un diseño responsivo y ordenado sin escribir tanto CSS tradicional.
+- *pnpm*: El profesor nos recomendó explorar este gestor de paquetes por su rapidez y eficiencia.
+- *ESLint*: Para asegurar un código limpio, algo que se ha enfatizado bastante durante el curso.
+- *PostCSS* y otras configuraciones que hacen parte de la preparación correcta del entorno de trabajo.
+
+## Estructura del proyecto
+
+El proyecto está organizado como lo aprendimos en clase, con una separación clara de componentes, estilos y lógica:
+
+- /app, /src: Contienen las rutas, componentes y estructura de la aplicación.
+- /components: Componentes reutilizables como encabezados, botones, secciones, etc.
+- /styles: Archivos con estilos globales o personalizados.
+- /public: Archivos estáticos como imágenes.
+- Archivos como tailwind.config.js, tsconfig.json, etc., están bien configurados según los lineamientos dados por el profesor.
+
+## ¿Qué necesitas para correr este proyecto?
+
+### Requisitos
+
+- Tener instalado *Node.js* (versión 18 o superior).
+- Instalar *pnpm*, recomendado en clase por su eficiencia:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+npm install -g pnpm
