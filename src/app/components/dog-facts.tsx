@@ -1,5 +1,4 @@
 "use client";
-
 import type React from "react";
 
 import { useState, useEffect, useRef } from "react";
@@ -146,9 +145,7 @@ export default function DogFacts() {
               ) : (
                 <>
                   <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-amber-300 to-amber-500"></div>
-                  <p className="text-lg text-amber-700 italic">
-                    "{currentFact}"
-                  </p>
+                  <p className="text-lg text-amber-700 italic">{currentFact}</p>
                   <div className="absolute bottom-0 right-0 w-full h-1 bg-gradient-to-r from-amber-500 to-amber-300"></div>
                 </>
               )}
@@ -200,7 +197,6 @@ export default function DogFacts() {
                     </div>
                   </div>
 
-                  {/* Reverso de la tarjeta */}
                   <div className="absolute w-full h-full backface-hidden rotate-y-180 bg-amber-100 rounded-lg p-6 flex flex-col justify-center items-center">
                     <h4 className="text-amber-800 text-xl font-bold mb-4">
                       {dogBreeds[activeBreed].name}
