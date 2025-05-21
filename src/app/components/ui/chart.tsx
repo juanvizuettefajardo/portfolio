@@ -85,11 +85,12 @@ const ChartStyle = ({ id, config }: { id: string; config: ChartConfig }) => {
             ([theme, prefix]) => `
 ${prefix} [data-chart=${id}] {
 ${colorConfig
-  .map(([_, itemConfig]) => {
+  .map(([key, itemConfig]) => {
+    void key;
     const color =
       itemConfig.theme?.[theme as keyof typeof itemConfig.theme] ||
       itemConfig.color;
-    return color ? `  --color-${_} ${color};` : null;
+    return color ? `  --color-${key} ${color};` : null;
   })
   .join("\n")}
 }
