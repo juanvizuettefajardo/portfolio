@@ -163,10 +163,6 @@ export default function DogFacts() {
           </div>
 
           <div>
-            <h3 className="text-2xl font-bold text-amber-800 mb-6 text-center lg:text-left">
-              Razas Populares
-            </h3>
-
             <div
               className="relative"
               ref={carouselRef}
