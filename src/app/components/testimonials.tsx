@@ -1,8 +1,6 @@
 "use client";
 
-import type React from "react";
-
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Quote, Send, Star, X, User } from "lucide-react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
@@ -16,10 +14,15 @@ interface Testimonial {
   rating: number;
 }
 
-const initialTestimonials: Testimonial[] = [];
-
 export default function Testimonials() {
-  const [testimonials, setTestimonials] = useState(initialTestimonials);
+  // Inicializar con datos de localStorage si existen
+  const [testimonials, setTestimonials] = useState<Testimonial[]>(() => {
+    if (typeof window !== "undefined") {
+      const saved = localStorage.getItem("testimonials");
+      return saved ? JSON.parse(saved) : [];
+    }
+    return [];
+  });
   const [showForm, setShowForm] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -28,11 +31,19 @@ export default function Testimonials() {
     rating: 5,
   });
 
+  // Guardar en localStorage cada vez que testimonials cambie
+  useEffect(() => {
+    localStorage.setItem("testimonials", JSON.stringify(testimonials));
+  }, [testimonials]);
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
   };
 
   const handleRatingChange = (rating: number) => {
@@ -42,9 +53,22 @@ export default function Testimonials() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const newTestimonial = {
+    // Validar que no estén vacíos
+    if (
+      formData.name.trim() === "" ||
+      formData.position.trim() === "" ||
+      formData.content.trim() === ""
+    ) {
+      alert("Por favor, completa todos los campos.");
+      return;
+    }
+
+    const newTestimonial: Testimonial = {
       id: Date.now(),
-      ...formData,
+      name: formData.name,
+      position: formData.position,
+      content: formData.content,
+      rating: formData.rating,
     };
 
     setTestimonials((prev) => [...prev, newTestimonial]);
@@ -149,7 +173,7 @@ export default function Testimonials() {
                   name="content"
                   value={formData.content}
                   onChange={handleChange}
-                  placeholder="Comparte tu experiencia o impresión..."
+                  placeholder="Comparte tu experiencia o impresion..."
                   rows={4}
                   required
                   className="w-full"
@@ -194,9 +218,9 @@ export default function Testimonials() {
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="bg-amber-50 p-6 rounded-lg relative transform transition-all hover:shadow-lg hover:-translate-y-1"
+              className="bg-amber-50 p-6 rounded-lg relative transform transition-all hover:shadow-lg hover:-translate-y-1 animate-fadeIn"
             >
-              <Quote className="absolute top-4 right-4 h-8 w-8 text-amber-200" />
+              <Quote className="absolute top-4 right-4 h-8 w-8 text-amber-200 opacity-50" />
 
               <p className="text-amber-700 mb-6 relative z-10">
                 {testimonial.content}
