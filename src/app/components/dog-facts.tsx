@@ -35,7 +35,7 @@ const dogBreeds = [
   },
   {
     name: "Labrador Retriever",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/images/labradorRetriever.png",
     fact: "Es una de las razas más populares como perro de familia y asistencia.",
   },
   {
