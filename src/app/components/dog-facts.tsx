@@ -40,22 +40,22 @@ const dogBreeds = [
   },
   {
     name: "Pastor Alemán",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/images/pastoraleman.png",
     fact: "Excelente perro de trabajo, usado en policía y rescate.",
   },
   {
     name: "Bulldog",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/images/bulldog.png",
     fact: "A pesar de su apariencia, son perros muy cariñosos y tranquilos.",
   },
   {
     name: "Golden Retriever",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/images/goldenRetriever",
     fact: "Conocidos por su inteligencia y temperamento amigable.",
   },
   {
     name: "Beagle",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/images/beagle.png",
     fact: "Tienen un olfato excepcional, usado para detectar alimentos en aduanas.",
   },
 ];
