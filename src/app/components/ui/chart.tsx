@@ -66,11 +66,9 @@ const ChartContainer = React.forwardRef<
 });
 ChartContainer.displayName = "Chart";
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-
 const ChartStyle = ({ id, config }: { id: string; config: ChartConfig }) => {
   const colorConfig = Object.entries(config).filter(
-    ([key, config]) => config.theme || config.color
+    ([_, config]) => config.theme || config.color
   );
 
   if (!colorConfig.length) {
@@ -85,12 +83,9 @@ const ChartStyle = ({ id, config }: { id: string; config: ChartConfig }) => {
             ([theme, prefix]) => `
 ${prefix} [data-chart=${id}] {
 ${colorConfig
-  .map(([key, itemConfig]) => {
-    void key;
-    const color =
-      itemConfig.theme?.[theme as keyof typeof itemConfig.theme] ||
-      itemConfig.color;
-    return color ? `  --color-${key} ${color};` : null;
+  .map(([key, { theme: itemTheme, color }]) => {
+    const resolvedColor = itemTheme?.[theme as keyof typeof itemTheme] || color;
+    return resolvedColor ? `  --color-${key}: ${resolvedColor};` : null;
   })
   .join("\n")}
 }
