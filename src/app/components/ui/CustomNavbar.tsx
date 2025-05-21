@@ -4,7 +4,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { addMonths, subMonths } from "date-fns";
 import { es } from "date-fns/locale";
 
-function CustomCalendar() {
+export default function CustomCalendar() {
   const [month, setMonth] = useState(new Date());
 
   const handlePreviousMonth = () => {
@@ -36,7 +36,6 @@ function CustomCalendar() {
         onMonthChange={setMonth}
         showOutsideDays
         locale={es}
-        // ...otras propiedades y estilos
       />
     </div>
   );
