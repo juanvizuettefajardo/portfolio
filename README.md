@@ -17,9 +17,6 @@ Estas son las herramientas que utilicé en el desarrollo del portafolio, varias 
 - *Next.js*: Framework de React que permite crear aplicaciones rápidas y optimizadas, recomendado por el profesor para este tipo de proyectos.
 - *TypeScript*: Nos enseñaron su importancia para evitar errores y tener un código más organizado y entendible.
 - *Tailwind CSS*: Un sistema de estilos que aprendimos a usar para lograr un diseño responsivo y ordenado sin escribir tanto CSS tradicional.
-- *pnpm*: El profesor nos recomendó explorar este gestor de paquetes por su rapidez y eficiencia.
-- *ESLint*: Para asegurar un código limpio, algo que se ha enfatizado bastante durante el curso.
-- *PostCSS* y otras configuraciones que hacen parte de la preparación correcta del entorno de trabajo.
 
 ## Estructura del proyecto
 
@@ -29,14 +26,14 @@ El proyecto está organizado como lo aprendimos en clase, con una separación cl
 - /components: Componentes reutilizables como encabezados, botones, secciones, etc.
 - /styles: Archivos con estilos globales o personalizados.
 - /public: Archivos estáticos como imágenes.
-- Archivos como tailwind.config.js, tsconfig.json, etc., están bien configurados según los lineamientos dados por el profesor.
+- Archivos como tsconfig.json, etc., están bien configurados según los lineamientos dados por el profesor.
 
 ## ¿Qué necesitas para correr este proyecto?
 
 ### Requisitos
 
 - Tener instalado *Node.js* (versión 18 o superior).
-- Instalar *pnpm*, recomendado en clase por su eficiencia:
+- Instalar *pnpm*
 
 ```bash
 npm install -g pnpm
